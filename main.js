@@ -16,8 +16,8 @@ reset_btn.addEventListener('click', reset)
 function timer() {
   milisegundos++
 
-  let hrs = Math.floor(milisegundos / (60 * 60 * 1000))
-  let mins = Math.floor((milisegundos - hrs * (60 * 60000)) / 60000)
+  let hrs = Math.floor(milisegundos / (60 * 60 * 100))
+  let mins = Math.floor(((milisegundos - hrs * (60 * 6000)) / 6000) % 60)
   let segs = Math.floor(((milisegundos - mins * (60 * 100)) / 100) % 60)
   let milis = milisegundos % 100
 
